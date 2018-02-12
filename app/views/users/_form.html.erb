@@ -1,0 +1,9 @@
+<% if local_assigns.has_key? :url %> 
+  <%= form_for(@user, url: url) do |f| %>
+      <%= render partial: 'form_body', locals: {f: f} %>
+  <% end %>
+<% else %>
+  <%= form_for(@user) do |f| %>
+      <%= render partial: 'form_body', locals: {f: f} %>
+  <% end %>
+<% end %>
